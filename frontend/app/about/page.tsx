@@ -1,21 +1,11 @@
-"use client"
-import { redirect } from "next/navigation";
 // import TopBarDropdown from '../../components/TopBarDropdown';
+
+import Link from "next/link";
 
 function WelcomeAbout() {
 
-    const handleClickSignUp = () => {
-        redirect("/signup");
-    }
-
-    const handleClickLogIn = () => {
-        redirect("/login");
-    }
     return (
-
         <div>
-            {/* <TopBarDropdown /> */}
-
             <h1 id='welcomeabouttitle'>S-COOL LOGO here</h1>
             <div>
                 <p className='welcomep'>
@@ -28,10 +18,10 @@ function WelcomeAbout() {
 
                 <div className='Btns'>
                 <div>
-                    <input type='button' onClick={handleClickSignUp} id='btn1' value='Sign me up!'></input>
+                    <Link href='/register' id='btn1'>Sign In</Link>
                 </div>
                 <div>
-                    <input type='button' onClick={handleClickLogIn} id='btn2' value='Log me in!'></input>
+                <Link href='/login' id='btn1'>Log In</Link>
                 </div>
                 </div>
             </div>
