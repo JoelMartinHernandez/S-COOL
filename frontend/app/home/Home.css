@@ -15,11 +15,12 @@
 }
 
 .logo-section {
+    padding-top: 5vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;
-}
+    width: 100vw;
+  }
 
 .home-navigation-menu {
     display: flex;
@@ -34,6 +35,7 @@
     border-bottom: 1px solid black;
     margin: 5px 0;
     display: block;
+    overflow: hidden;
 }
 
 .home-menu-item span {

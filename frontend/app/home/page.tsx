@@ -10,8 +10,7 @@ const Home: React.FC = () => {
         <div className="home-container">
             <TopBarDropdown />
             <div className="logo-section">
-                {/* Usando Image de Next.js para optimización. */}
-                <Image src={logo} alt="Logo" width={350} height={30} />
+                <Image src={logo} alt="Logo" width={250} height={200} />
             </div>
             <nav className="home-navigation-menu">
                 <Link href="/about" className="home-menu-item"><span className="home-item">About</span></Link>
