@@ -1,32 +1,79 @@
-.homepage {
+
+.home-container{
     background-color: #EEE9E3;
-    padding-top: 50px;
     height: 100vh;
-    font-family: 'Montserrat', sans-serif;overflow: hidden;
+}
+.logo-section h1 {
+    margin: 0;
+    font-size: 24px;
 }
 
-.topics {
-    margin-top: 50px;
+.logo-section img {
+    justify-content: space-around;
+    height: auto;
+    display: flex;
+    text-align: center;
 }
 
-.topic {
-    font-weight: inherit;
-    margin-bottom: 50px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 32px;
-    margin-left: 100px;
-    color: #0B1215;
+.logo-section {
+    padding-top: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
+
+.home-navigation-menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.home-menu-item {
+    text-decoration: none;
+    color: black;
+    padding: 10px 0;
+    padding-left: 60px;
+    border-bottom: 1px solid black;
+    margin: 5px 0;
+    display: block;
+    overflow: hidden;
+}
+
+.home-menu-item span {
+    display: block;
     transition: transform 0.4s ease-in-out;
 }
 
-a {
-    text-decoration: none;
+.home-menu-item:hover span {
+    transform: translateX(80px);
 }
 
-#hometitle {
+.home-item{
+    font-size: xxx-large;
+}
+
+
+
+.topics{
+    margin-top: 50px;
+
+    
+}
+.topic{
+    margin-bottom: 50px;
+    font-family: 'MADE TOMMY';
+    font-size: 32px;
+    margin-left: 100px;
+    color: #0B1215;
+
+}
+
+#hometitle{
+
     margin-top: 15px;
     text-align: center;
 }
+
 
 .horizontal-lineAbout {
     position: relative;
@@ -36,6 +83,7 @@ a {
 .horizontal-lineAbout::before {
     content: '';
     position: absolute;
+
     margin-left: -18px;
     left: -0.1%;
     top: 76%;
@@ -43,6 +91,7 @@ a {
     height: calc(100% - -200px);
     background-color: #0B1215;
     transform: translateY(-50%) rotate(-90deg);
+
 }
 
 .horizontal-lineCourses {
@@ -53,6 +102,7 @@ a {
 .horizontal-lineCourses::before {
     content: '';
     position: absolute;
+
     margin-left: -13px;
     left: 0%;
     top: 73%;
@@ -71,40 +121,17 @@ a {
     content: '';
     position: absolute;
     margin-left: -15px;
-    left: -0.1%;
+
+    left: -0.1%; 
     top: 74.59%;
-    width: 2px;
-    height: calc(100% - -200px);
-    background-color: #0B1215;
-    transform: translateY(-50%) rotate(-90deg);
+    width: 2px; 
+    height: calc(100% - -200px); 
+    background-color: #0B1215; 
+    transform: translateY(-50%) rotate(-90deg); 
 }
 
-.logo-section {
-    text-align: center;
-}
-
-.homeflower {
-    margin-top: -370px;
-    margin-left: 100px;
-    overflow: hidden;
-}
-
-.myHomepageflower {
-    width: 380.43px;
-    height: 378.75px; 
+.homeflower{
+    padding-left: 124px;
 }
 
 
-.horizontal-lineAbout a,
-.horizontal-lineCourses a,
-.horizontal-lineProfile a {
-    transition: transform 0.5s ease-in-out;
-}
-
-.horizontal-lineAbout:hover,
-.horizontal-lineCourses:hover,
-.horizontal-lineProfile:hover {
-    transform: translateX(70px);
-    transition: transform 0.5s ease-in-out;
-
-}

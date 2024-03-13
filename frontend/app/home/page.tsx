@@ -1,6 +1,7 @@
 import React from 'react';
 import './Home.css';
 import TopBarDropdown from '../../components/TopBarDropdown';
+
 import Link from 'next/link'; 
 import Image from 'next/image';
 import logo from '../../assets/img/logo.svg';
@@ -44,6 +45,7 @@ const Home: React.FC = () => {
                 </div>
             </div>
         </>
+
     );
 }
 

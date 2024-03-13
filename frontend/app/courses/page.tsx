@@ -1,5 +1,7 @@
-"use client"; 
+
 import Link from "next/link";
+import { List } from './ListCourse';
+
 import './Courses.css';
 import TopBarDropdown from '../../components/TopBarDropdown';
 import Image from 'next/image';
@@ -19,6 +21,9 @@ function Courses() {
                 <Link href="/profile" className="menu-item"><span className="course-item">Finance</span></Link>
                 <Link href="/profile" className="menu-item"><span className="course-item">Graphic Design</span></Link>
             </nav>
+            <div>
+            <List></List>
+        </div>
         </div>
     );
 }

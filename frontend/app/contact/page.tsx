@@ -5,6 +5,7 @@ import './ContactUsPage.css';
 import TopBarDropdown from '../../components/TopBarDropdown';
 import Image from 'next/image';
 import logo from '../../assets/img/logo.svg';
+import { createClient } from "@/utils/supabase/server";
 
 const ContactUsPage: React.FC = () => {
     const onFinish = (values: any) => {
@@ -13,6 +14,16 @@ const ContactUsPage: React.FC = () => {
 
     const onFinishFailed = (errorInfo: any) => {
         console.log('Failed:', errorInfo);
+    };
+
+    const publishComment = async() => {
+        const supabase = createClient();
+        const { data, error } = await supabase
+            .from('contact')
+            .insert([
+                { contact_message: 'Hola', user_id: localStorage },
+            ])
+            .select()
     };
 
     return (
