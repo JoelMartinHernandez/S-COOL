@@ -97,12 +97,17 @@ a{
     transform: translateY(-50%) rotate(-90deg); 
 }
 
-
-.homeflower{
-    padding-left: 124px;
-}
-
-
 .logo-section{
     text-align: center;
+}
+
+.homeflower {
+    margin-top: -370px;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.myHomepageflower {
+    width: 380.43px;
+    height: 378.75px; 
 }

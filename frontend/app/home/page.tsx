@@ -4,6 +4,8 @@ import TopBarDropdown from '../../components/TopBarDropdown';
 import Link from 'next/link'; 
 import Image from 'next/image';
 import logo from '../../assets/img/logo.svg';
+import greenflower from '../../assets/img/greenflower.svg';
+
 
 const Home: React.FC = () => {
     return (
@@ -44,6 +46,9 @@ const Home: React.FC = () => {
                             <h3 className='topic'>Contact</h3>
                         </a>
                     </div>
+                </div>
+                <div className="homeflower">
+                    <Image src={greenflower} alt="flower" className='myHomepageflower' />
                 </div>
             </div>
         </>
