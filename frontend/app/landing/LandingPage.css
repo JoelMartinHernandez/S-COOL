@@ -1,0 +1,39 @@
+.landing-page {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #E9D8C8;
+  }
+
+  .indicators-container {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-drag: none;
+    padding-bottom: 200px;
+  }
+  
+  .triangle-indicator {
+    width: 100vw;
+    height: 100px;
+    background: #FCC21B;
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+  }
+  
+  .rectangle-indicator {
+    width: 100vw;
+    height: 100vh;
+    background: #FCC21B;
+    display: flex;
+    text-align: center;
+  }
+
+  .scroll-message {
+    text-align: center;
+    padding-top: 100%;
+  }
+
+
