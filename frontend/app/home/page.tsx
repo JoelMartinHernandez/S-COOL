@@ -6,7 +6,7 @@ import Image from 'next/image';
 import logo from '../../assets/img/logo.svg';
 import greenflower from '../../assets/img/greenflower.svg';
 import 'typeface-roboto';
-import '@fontsource/roboto'; // Estilos de fuente en 400.
+import '@fontsource/roboto';
 
 const Home: React.FC = () => {
     return (
