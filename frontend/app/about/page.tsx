@@ -1,43 +1,46 @@
-"use client"
-import { redirect } from "next/navigation";
-// import TopBarDropdown from '../../components/TopBarDropdown';
+import './About.css';
+import TopBarDropdown from '../../components/TopBarDropdown';
+import Link from 'next/link'; 
+import Image from 'next/image';
+import logo from '../../assets/img/logo.svg';
 
-function WelcomeAbout() {
-
-    const handleClickSignUp = () => {
-        redirect("/signup");
-    }
-
-    const handleClickLogIn = () => {
-        redirect("/login");
-    }
+const About: React.FC = () => {
     return (
-
-        <div>
-            {/* <TopBarDropdown /> */}
-
-            <h1 id='welcomeabouttitle'>S-COOL LOGO here</h1>
-            <div>
+        <>
+         
+            <TopBarDropdown />
+            <div className='welcomeaboutpage'>
+            <div className="logo-section">
+                <Image src={logo} alt="Logo" />
+            </div>
+            <div className='paragraph'>
                 <p className='welcomep'>
-                A text about the online school. 
-                Lorem ipsum dolor sit amet, 
-                consectetur adipiscing elit.
-                Sed mattis erat ante,
-                non eleifend diam auctor in. 
+                    A text about the online  
+                    school. Lorem ipsum dolor 
+                    sit amet, consectetur 
+                    adipiscing elit. Sed mattis
+                    erat ante, non eleifend diam
+                    auctor in. Lorem ipsum
+                    dolor sit amet, consectetur
+                    adipiscing elit. Sed mattis
+                    erat ante, non eleifend diam
+                    auctor in
                 </p>
 
                 <div className='Btns'>
-                <div>
-                    <input type='button' onClick={handleClickSignUp} id='btn1' value='Sign me up!'></input>
-                </div>
-                <div>
-                    <input type='button' onClick={handleClickLogIn} id='btn2' value='Log me in!'></input>
-                </div>
+                    <a href='/register'>
+                        <input type='button' id='btn1' value='Sign me up!'></input>
+                    </a>
+                    <a href='/login'>
+                        <input type='button' id='btn2' value='Log me in!'></input>
+                    </a>
                 </div>
             </div>
 
         </div>
+        </>
+
     );
 }
 
-export default WelcomeAbout;
+export default About;

@@ -1,77 +1,26 @@
-.home-container{
+.homepage{
     background-color: #EEE9E3;
+    padding-top: 50px;
     height: 100vh;
+
+    
 }
-.logo-section h1 {
-    margin: 0;
-    font-size: 24px;
-}
-
-.logo-section img {
-    justify-content: space-around;
-    height: auto;
-    display: flex;
-    text-align: center;
-}
-
-.logo-section {
-    padding-top: 5vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-  }
-
-.home-navigation-menu {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-}
-.home-menu-item {
-    text-decoration: none;
-    color: black;
-    padding: 10px 0;
-    padding-left: 60px;
-    border-bottom: 1px solid black;
-    margin: 5px 0;
-    display: block;
-    overflow: hidden;
-}
-
-.home-menu-item span {
-    display: block;
-    transition: transform 0.4s ease-in-out;
-}
-
-.home-menu-item:hover span {
-    transform: translateX(80px);
-}
-
-.home-item{
-    font-size: xxx-large;
-}
-
-
-
-
-
-
-
-
-
-
 .topics{
     margin-top: 50px;
 
     
 }
+
 .topic{
+    font-weight: inherit;
     margin-bottom: 50px;
     font-family: 'MADE TOMMY';
     font-size: 32px;
     margin-left: 100px;
     color: #0B1215;
-
+}
+a{
+    text-decoration: none ;
 }
 
 #hometitle{
@@ -148,7 +97,12 @@
     transform: translateY(-50%) rotate(-90deg); 
 }
 
+
 .homeflower{
     padding-left: 124px;
 }
 
+
+.logo-section{
+    text-align: center;
+}
