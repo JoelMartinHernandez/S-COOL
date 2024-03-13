@@ -28,6 +28,7 @@
     font-size: 20px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-family: 'Montserrat', sans-serif;
+    
 
 }
 #btn2{
@@ -39,8 +40,10 @@
     font-size: 20px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-family: 'Montserrat', sans-serif;
+}
 
-
+#btn1, #btn2 {
+    display: inline-block;
 }
 .logo-section{
     text-align: center;
