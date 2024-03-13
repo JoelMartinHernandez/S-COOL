@@ -6,6 +6,7 @@ import TopBarDropdown from '../../components/TopBarDropdown';
 import Image from 'next/image';
 import logo from '../../assets/img/logo.svg';
 
+
 const AskPage: React.FC = () => {
     const onFinish = (values: any) => {
         console.log('Received values of form:', values);
@@ -14,6 +15,7 @@ const AskPage: React.FC = () => {
     const onFinishFailed = (errorInfo: any) => {
         console.log('Failed:', errorInfo);
     };
+
 
     return (
         <div className="inquiry-page">
