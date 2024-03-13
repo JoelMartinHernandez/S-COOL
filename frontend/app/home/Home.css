@@ -2,9 +2,10 @@
     background-color: #EEE9E3;
     padding-top: 50px;
     height: 100vh;
-
-    
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Montserrat', sans-serif;
 }
+
 .topics{
     margin-top: 50px;
 
@@ -14,7 +15,8 @@
 .topic{
     font-weight: inherit;
     margin-bottom: 50px;
-    font-family: 'MADE TOMMY';
+    /* font-family: 'MADE TOMMY'; */
+    font-family: 'Montserrat', sans-serif;
     font-size: 32px;
     margin-left: 100px;
     color: #0B1215;
@@ -37,9 +39,9 @@ a{
 .horizontal-lineAbout::before {
     content: '';
     position: absolute;
-    margin-left: -16px;
+    margin-left: -18px;
     left: -0.1%; 
-    top: 74.59%;
+    top: 76%;
     width: 2px; 
     height: calc(100% - -200px); 
     background-color: #0B1215; 
@@ -54,25 +56,9 @@ a{
 .horizontal-lineCourses::before {
     content: '';
     position: absolute;
-    margin-left: -10px;
+    margin-left: -13px;
     left: 0%; 
     top: 73%;
-    width: 2px; 
-    height: calc(100% - -200px); 
-    background-color: black; 
-    transform: translateY(-50%) rotate(-90deg); 
-}
-.horizontal-lineQuizz {
-    position: relative;
-    margin-top: 10px; 
-}
-
-.horizontal-lineQuizz::before {
-    content: '';
-    position: absolute;
-    margin-left: -8px;
-    left: 0%; 
-    top: 74.86%;
     width: 2px; 
     height: calc(100% - -200px); 
     background-color: black; 
@@ -104,7 +90,6 @@ a{
 .homeflower {
     margin-top: -370px;
     margin-left: 100px;
-    max-width: 100%;
     overflow: hidden;
 }
 

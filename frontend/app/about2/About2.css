@@ -2,8 +2,7 @@
     background-color: #EEE9E3;
     height: 100vh;
     padding-top: 50px;
-    
-    font-family: 'MADE TOMMY';
+    font-family: 'Montserrat', sans-serif;
 
 }
 #welcomeabout2title{
@@ -19,7 +18,7 @@
 .Btnabout2{
     text-align: center;
     padding-top: 5px; 
-
+    font-family: 'Montserrat', sans-serif;
 }
 
 #btnlogout{
