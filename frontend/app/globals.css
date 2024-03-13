@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+html, body {
+
+  padding: 0;
+  
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+
+  }
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,8 +17,8 @@
     --background: #EEE9E3;
     --btn-background: 200 10% 91%;
     --btn-background-hover: 200 10% 89%;
-    /* --foreground: 200 50% 3%; */
-  }
+    --foreground: 200 50% 3%;
+  } 
 
   @media (prefers-color-scheme: dark) {
     :root {
@@ -18,7 +28,7 @@
       /* --foreground: 200 20% 96%; */
     }
   }
-}
+
 
 @layer base {
   * {
@@ -39,4 +49,5 @@
     opacity: 1;
     transform: translateY(0);
   }
+} 
 }
