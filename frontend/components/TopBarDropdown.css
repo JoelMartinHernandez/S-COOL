@@ -35,6 +35,7 @@
   z-index: 1;
   min-height: 5vh;
   min-width: 15vw;
+  max-width: 55vw;
   box-sizing: border-box;
 }
 

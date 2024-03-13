@@ -1,3 +1,4 @@
+
 .home-container{
     background-color: #EEE9E3;
     height: 100vh;
@@ -53,13 +54,6 @@
 
 
 
-
-
-
-
-
-
-
 .topics{
     margin-top: 50px;
 
@@ -75,6 +69,7 @@
 }
 
 #hometitle{
+
     margin-top: 15px;
     text-align: center;
 }
@@ -88,13 +83,15 @@
 .horizontal-lineAbout::before {
     content: '';
     position: absolute;
-    margin-left: -16px;
-    left: -0.1%; 
-    top: 74.59%;
-    width: 2px; 
-    height: calc(100% - -200px); 
-    background-color: #0B1215; 
-    transform: translateY(-50%) rotate(-90deg); 
+
+    margin-left: -18px;
+    left: -0.1%;
+    top: 76%;
+    width: 2px;
+    height: calc(100% - -200px);
+    background-color: #0B1215;
+    transform: translateY(-50%) rotate(-90deg);
+
 }
 
 .horizontal-lineCourses {
@@ -105,41 +102,26 @@
 .horizontal-lineCourses::before {
     content: '';
     position: absolute;
-    margin-left: -10px;
-    left: 0%; 
+
+    margin-left: -13px;
+    left: 0%;
     top: 73%;
-    width: 2px; 
-    height: calc(100% - -200px); 
-    background-color: black; 
-    transform: translateY(-50%) rotate(-90deg); 
+    width: 2px;
+    height: calc(100% - -200px);
+    background-color: black;
+    transform: translateY(-50%) rotate(-90deg);
 }
-.horizontal-lineQuizz {
-    position: relative;
-    margin-top: 10px; 
-}
-
-.horizontal-lineQuizz::before {
-    content: '';
-    position: absolute;
-    margin-left: -8px;
-    left: 0%; 
-    top: 74.86%;
-    width: 2px; 
-    height: calc(100% - -200px); 
-    background-color: black; 
-    transform: translateY(-50%) rotate(-90deg); 
-}
-
 
 .horizontal-lineProfile {
     position: relative;
-    margin-top: 10px; 
+    margin-top: 10px;
 }
 
 .horizontal-lineProfile::before {
     content: '';
     position: absolute;
     margin-left: -15px;
+
     left: -0.1%; 
     top: 74.59%;
     width: 2px; 
@@ -151,4 +133,5 @@
 .homeflower{
     padding-left: 124px;
 }
+
 

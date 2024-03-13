@@ -19,10 +19,13 @@ const TopBarDropdown: React.FC = () => {
         break;
       case '3':
         router.push('/courses');
-        break;
-      // Assuming '4' is for log out, adjust if needed.
+
       case '4':
-        // Implement log out logic or navigation as required.
+        router.push('/about');
+      case '5':
+        router.push('/contact');
+      case '6':
+
         console.log('Log Out Clicked');
         break;
       default:
@@ -32,7 +35,9 @@ const TopBarDropdown: React.FC = () => {
 
   return (
     <div className="dropdownContainer">
+
       <div 
+
         className="menuIcon"
         onMouseOver={() => setVisible(true)}
         onMouseLeave={() => setVisible(false)}
@@ -43,7 +48,9 @@ const TopBarDropdown: React.FC = () => {
             <div className="menuItem" onClick={() => handleMenuClick('1')}>Home</div>
             <div className="menuItem" onClick={() => handleMenuClick('2')}>Profile</div>
             <div className="menuItem" onClick={() => handleMenuClick('3')}>Courses</div>
-            <div className="menuItem" onClick={() => handleMenuClick('4')}>Log Out</div>
+            <div className="menuItem" onClick={() => handleMenuClick('4')}>About</div>
+            <div className="menuItem" onClick={() => handleMenuClick('5')}>Contact</div>
+            <div className="menuItem" onClick={() => handleMenuClick('6')}>Log Out</div>
           </div>
         )}
       </div>

@@ -1,33 +1,46 @@
-// import TopBarDropdown from '../../components/TopBarDropdown';
+import './About.css';
+import TopBarDropdown from '../../components/TopBarDropdown';
+import Link from 'next/link'; 
+import Image from 'next/image';
+import logo from '../../assets/img/logo.svg';
 
-import Link from "next/link";
-
-function WelcomeAbout() {
-
+const About: React.FC = () => {
     return (
-        <div>
-            <h1 id='welcomeabouttitle'>S-COOL LOGO here</h1>
-            <div>
+        <>
+         
+            <TopBarDropdown />
+            <div className='welcomeaboutpage'>
+            <div className="logo-section">
+                <Image src={logo} alt="Logo" />
+            </div>
+            <div className='paragraph'>
                 <p className='welcomep'>
-                A text about the online school. 
-                Lorem ipsum dolor sit amet, 
-                consectetur adipiscing elit.
-                Sed mattis erat ante,
-                non eleifend diam auctor in. 
+                    A text about the online  
+                    school. Lorem ipsum dolor 
+                    sit amet, consectetur 
+                    adipiscing elit. Sed mattis
+                    erat ante, non eleifend diam
+                    auctor in. Lorem ipsum
+                    dolor sit amet, consectetur
+                    adipiscing elit. Sed mattis
+                    erat ante, non eleifend diam
+                    auctor in
                 </p>
 
                 <div className='Btns'>
-                <div>
-                    <Link href='/register' id='btn1'>Sign In</Link>
-                </div>
-                <div>
-                <Link href='/login' id='btn1'>Log In</Link>
-                </div>
+                    <a href='/register'>
+                        <input type='button' id='btn1' value='Sign me up!'></input>
+                    </a>
+                    <a href='/login'>
+                        <input type='button' id='btn2' value='Log me in!'></input>
+                    </a>
                 </div>
             </div>
 
         </div>
+        </>
+
     );
 }
 
-export default WelcomeAbout;
+export default About;
