@@ -5,6 +5,7 @@ import './ContactUsPage.css';
 import TopBarDropdown from '../../components/TopBarDropdown';
 import Image from 'next/image';
 import logo from '../../assets/img/logo.svg';
+import flower from '../../assets/img/contactusflower.svg';
 
 const ContactUsPage: React.FC = () => {
     const onFinish = (values: any) => {
@@ -50,6 +51,9 @@ const ContactUsPage: React.FC = () => {
                         </Button>
                     </Form.Item>
                 </Form>
+            </div>
+            <div className="flower">
+                <Image src={flower} id="flower" alt="Logo"  />
             </div>
         </div>
     );
