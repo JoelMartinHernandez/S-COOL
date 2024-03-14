@@ -1,6 +1,5 @@
-"use server";
-import { cookies } from "next/headers";
 import { createClient } from '@/utils/supabase/server';
+import './Courses.css'; // Asegúrate de importar el CSS
 
 interface Course {
     course_id: number;
@@ -8,20 +7,16 @@ interface Course {
     course_description: string;
 }
 
-interface Props {
-    course: Course[];
-}
-
 export async function List() {
     const supabase = createClient();
     const { data: course } = await supabase.from("course").select();
 
     return (
-        <div>
+        <div className="courses-container"> {/* Utiliza la misma clase que en Courses */}
             {course ? (
                 course.map((b: Course, index: number) => (
-                    <div className="bike-item" key={b.course_id}>
-                        {b.course_id} {b.course_name}
+                    <div className="menu-item" key={b.course_id}> 
+                        <span className="course-item"> {b.course_name}</span>
                     </div>
                 ))
             ) : (
