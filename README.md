@@ -6,6 +6,10 @@ Figjam:
 
 https://www.figma.com/file/oCNcDNze8fxARtkZ7cR8We/LPA?type=whiteboard&node-id=0%3A1&t=NLXn3wSFqqH3MaLC-1
 
+Presentation:
+
+https://www.figma.com/file/vXd1aHnxWFktFv1OifYrHb/LPA-Presentation?type=design&node-id=0%3A1&mode=design&t=DEMykavLNVB0VkWx-1
+
 
 Github Projects:
 
