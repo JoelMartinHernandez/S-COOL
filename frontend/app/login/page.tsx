@@ -6,6 +6,8 @@ import { SubmitButton } from "./submit-button";
 import Image from 'next/image';
 import logo from '../../assets/img/logo.svg';
 import './login.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 export default function Login({
   searchParams,
@@ -56,52 +58,68 @@ export default function Login({
   };
 
   return (
-    <div className="flex-1 flex flex-col w-full px-8 sm:max-w-md justify-center gap-2">
+    <div className="page-containerRegister">
 
       <div className="logo-container">
-        <Image src={logo} alt="Logo" width={350} height={30} />
+        <Image src={logo} className="MyLogo" alt="Logo"  />
       </div>
-
-      <form className="animate-in flex-1 flex flex-col w-full justify-center gap-2 text-foreground">
-        <label className="text-md" htmlFor="email">
-          Email
-        </label>
-        <input
-          className="rounded-md px-4 py-2 bg-inherit border mb-6"
-          name="email"
-          placeholder="you@example.com"
-          required
-        />
-        <label className="text-md" htmlFor="password">
-          Password
-        </label>
-        <input
-          className="rounded-md px-4 py-2 bg-inherit border mb-6"
-          type="password"
-          name="password"
-          placeholder="••••••••"
-          required
-        />
-        <SubmitButton
-          formAction={signIn}
-          className="bg-green-700 rounded-md px-4 py-2 text-foreground mb-2"
-          pendingText="Signing In..."
-        >
-          Log In
-        </SubmitButton>
-        <SubmitButton
-          formAction={signUp}
-          className="border border-foreground/20 rounded-md px-4 py-2 text-foreground mb-2"
-          pendingText="Signing Up..."
-        >
-          Sign Up
-        </SubmitButton>
-        {searchParams?.message && (
-          <p className="mt-4 p-4 bg-foreground/10 text-foreground text-center">
-            {searchParams.message}
-          </p>
-        )}
-      </form>
+      <div className="content-containerRegister">
+          <form  className="containerRegister">
+            <div  className='form-group champform'>
+              <label htmlFor="email">
+                Email
+              </label>
+              <input
+                className="form-control champtext"
+                name="email"
+                placeholder="you@example.com"
+                required
+              />
+            </div>
+            <div  className='form-group champform'>
+              <label className="text-md" htmlFor="password">
+                Password
+              </label>
+              <input
+               className="form-control champtext"
+                type="password"
+                name="password"
+                placeholder="••••••••"
+                required
+              />
+            </div>
+            
+            <div className='MyBtnsRegister'>
+              <div className="text-center">
+                <SubmitButton
+                  formAction={signIn}
+                  className='BtnRegister'
+                  id='loginbtn'
+                  pendingText="Signing In..."
+                >
+                  LOG IN
+                </SubmitButton>
+              </div>
+              <div className="text-center">
+                <SubmitButton
+                  formAction={signUp}
+                  className='BtnRegister' id='signupbtn'
+                  pendingText="Signing Up..."
+                >
+                  SIGN UP
+                </SubmitButton>
+              </div>
+              
+              {searchParams?.message && (
+                <p className="mt-4 p-4 bg-foreground/10 text-foreground text-center">
+                  {searchParams.message}
+                </p>
+              )}
+            </div>
+           
+          </form>
+      </div>
+      
     </div>
   );
 }
