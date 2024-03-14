@@ -47,14 +47,13 @@
 
   .rectangle-indicator h2 {
     padding-right: 150px;
-    margin: auto; /* Centrer horizontalement */
-    color: #0B1215; /* Couleur du texte */
-    font-size: 20px; /* Taille de la police */
+    margin: auto; 
+    color: #0B1215; 
+    font-size: 20px; 
   }
   .landinglogo{
     background-color: #EEE9E3;
     text-align: center;
-    /* padding-bottom: 170px; */
 
   }
   #landinglogo{
@@ -66,22 +65,22 @@
   .flower{
     background-color: #EEE9E3;
     text-align: center;
-    height: auto; /* Permet à la hauteur de s'ajuster automatiquement pour conserver les proportions */
+    height: auto; 
     position: relative;
     padding-bottom: 30px;
   }
   #flower {
     margin-bottom: -30px;
-    width: 320px; /* Définissez la largeur souhaitée */
-    height: auto; /* Permet à la hauteur de s'ajuster automatiquement pour conserver les proportions */
+    width: 320px; 
+    height: auto; 
   }
   .flower p {
     position: absolute;
-    top: 30%; /* Positionne le texte au milieu verticalement */
-    left: 50%; /* Positionne le texte au milieu horizontalement */
-    transform: translate(-50%, -50%); /* Centre le texte par rapport à son parent */
-    color: #0B1215; /* Couleur du texte */
-    font-size: 24px; /* Taille de la police */
+    top: 30%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: #0B1215; 
+    font-size: 24px; 
     font-family: 'Montserrat', sans-serif;
 
   }
