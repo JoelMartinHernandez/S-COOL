@@ -1,13 +1,10 @@
 import React from 'react';
 import './Home.css';
 import TopBarDropdown from '../../components/TopBarDropdown';
-
 import Link from 'next/link'; 
 import Image from 'next/image';
 import logo from '../../assets/img/logo.svg';
 import greenflower from '../../assets/img/greenflower.svg';
-import 'typeface-roboto';
-import '@fontsource/roboto';
 
 const Home: React.FC = () => {
     return (
@@ -19,33 +16,31 @@ const Home: React.FC = () => {
                 </div>
                 <div className='topics'>
                     <div className='horizontal-lineAbout'>
-                        <a href="/about2">
-                            <h3 className='topic'>About</h3>
-                        </a>
+                        <Link href="/about2">
+                            <span className='topic'><a>About</a></span>
+                        </Link>
                     </div>
                     <div className='horizontal-lineCourses'>
-                        <a href="/courses">
-                            <h3 className='topic'>Courses</h3>
-                        </a>
+                        <Link href="/courses">
+                            <span className='topic'><a>Courses</a></span>
+                        </Link>
                     </div>
-                    
                     <div className='horizontal-lineProfile'>
-                        <a href="/profile">
-                            <h3 className='topic'>Profile</h3>
-                        </a>
+                        <Link href="/profile">
+                            <span className='topic'><a>Profile</a></span>
+                        </Link>
                     </div>
                     <div className='horizontal-lineCourses'>
-                        <a href="/contact">
-                            <h3 className='topic'>Contact</h3>
-                        </a>
+                        <Link href="/contact">
+                            <span className='topic'><a>Contact</a></span>
+                        </Link>
                     </div>
                 </div>
                 <div className="homeflower">
-                    <Image src={greenflower} alt="flower" className='myHomepageflower' />
+                    <Image src={greenflower} alt="flower" />
                 </div>
             </div>
         </>
-
     );
 }
 

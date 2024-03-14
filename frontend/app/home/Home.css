@@ -1,18 +1,17 @@
-
 .home-container{
     background-color: #EEE9E3;
     height: 100vh;
 }
+
 .logo-section h1 {
     margin: 0;
     font-size: 24px;
 }
 
 .logo-section img {
-    justify-content: space-around;
     height: auto;
     display: flex;
-    text-align: center;
+    justify-content: center;
 }
 
 .logo-section {
@@ -21,21 +20,22 @@
     justify-content: center;
     align-items: center;
     width: 100vw;
-  }
+}
 
 .home-navigation-menu {
+    justify-content: space-around;
     display: flex;
     flex-direction: column;
     margin-top: 20px;
 }
+
 .home-menu-item {
     text-decoration: none;
     color: black;
-    padding: 10px 0;
+    padding: 122px;
     padding-left: 60px;
     border-bottom: 1px solid black;
     margin: 5px 0;
-    display: block;
     overflow: hidden;
 }
 
@@ -45,33 +45,66 @@
 }
 
 .home-menu-item:hover span {
-    transform: translateX(80px);
+    transform: translateX(40px);
 }
 
-.home-item{
+.home-item {
     font-size: xxx-large;
 }
 
-
-
-.topics{
+.topics {
     margin-top: 50px;
-
-    
 }
-.topic{
+
+.topic {
+    font-weight: inherit;
     margin-bottom: 50px;
-    font-family: 'MADE TOMMY';
     font-size: 32px;
     margin-left: 100px;
     color: #0B1215;
-
+    transition: transform 0.4s ease-in-out;
 }
 
-#hometitle{
+.horizontal-lineAbout,
+.horizontal-lineCourses,
+.horizontal-lineProfile {
+    transition: transform 0.4s ease-in-out;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
 
+.horizontal-lineAbout:hover,
+.horizontal-lineCourses:hover,
+.horizontal-lineProfile:hover {
+    transform: translateX(40px);
+}
+
+
+#hometitle {
     margin-top: 15px;
     text-align: center;
+}
+
+.horizontal-lineAbout {
+    position: relative;
+    margin-top: 10px;
+}
+
+.horizontal-lineAbout::before,
+.horizontal-lineCourses::before,
+.horizontal-lineProfile::before {
+    content: '';
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    width: 2px;
+    height: 100%;
+    background-color: #0B1215;
+    transform: translateY(-50%);
+}
+
+.homeflower {
+    padding-left: 124px;
 }
 
 
@@ -83,7 +116,6 @@
 .horizontal-lineAbout::before {
     content: '';
     position: absolute;
-
     margin-left: -18px;
     left: -0.1%;
     top: 76%;
@@ -129,9 +161,3 @@
     background-color: #0B1215; 
     transform: translateY(-50%) rotate(-90deg); 
 }
-
-.homeflower{
-    padding-left: 124px;
-}
-
-
