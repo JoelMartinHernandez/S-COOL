@@ -1,7 +1,8 @@
-.home-container{
+.homepage{
     background-color: #EEE9E3;
     height: 100vh;
 }
+
 
 .logo-section h1 {
     margin: 0;
@@ -105,7 +106,9 @@
 }
 
 .homeflower {
-    padding-left: 124px;
+    padding-left: 50px;
+    overflow: hidden;
+    margin-top: -350px;
 }
 
 
@@ -162,3 +165,4 @@
     background-color: #0B1215; 
     transform: translateY(-50%) rotate(-90deg); 
 }
+
