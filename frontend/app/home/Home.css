@@ -1,3 +1,4 @@
+
 .homepage{
     background-color: #EEE9E3;
     height: 100vh;
@@ -109,8 +110,14 @@
     padding-left: 50px;
     overflow: hidden;
     margin-top: -350px;
-}
+    background-color: #EEE9E3;
 
+}
+.myHomepageflower{
+    overflow: hidden;
+    background-color: #EEE9E3;
+
+}
 
 .horizontal-lineAbout {
     position: relative;

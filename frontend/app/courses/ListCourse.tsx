@@ -22,6 +22,7 @@ export async function List() {
             ) : (
                 <div>No se encontraron cursos.</div>
             )}
+            
         </div>
     );
 }

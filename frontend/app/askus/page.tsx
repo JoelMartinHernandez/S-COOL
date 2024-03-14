@@ -1,10 +1,11 @@
 "use client";
 import React from 'react';
-import { Form, Input, Button } from 'antd';
 import './AskPage.css';
 import TopBarDropdown from '../../components/TopBarDropdown';
 import Image from 'next/image';
 import logo from '../../assets/img/logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const AskPage: React.FC = () => {
     const onFinish = (values: any) => {
@@ -16,37 +17,25 @@ const AskPage: React.FC = () => {
     };
 
     return (
-        <div className="inquiry-page">
-            <TopBarDropdown />
-            <div className="logo-section">
-                <Image src={logo} alt="Logo" width={250} height={200} />
-            </div>
-            <br />
-            <div className="inquiry-form-wrapper">
-                <h1 className="inquiry-title">Is there something you don’t understand or want to know more about?</h1>
+        <>
+        <TopBarDropdown />
 
-                <Form
-                    name="inquiry_form"
-                    onFinish={onFinish}
-                    onFinishFailed={onFinishFailed}
-                    layout="vertical"
-                    className="inquiry-form"
-                >
-                    <Form.Item
-                        name="message"
-                        label="Leave us a question:"
-                        rules={[{ required: true, message: 'Please input your message!' }]}
-                    >
-                        <Input.TextArea />
-                    </Form.Item>
-                    <Form.Item>
-                        <Button type="primary" htmlType="submit">
-                            SEND
-                        </Button>
-                    </Form.Item>
-                </Form>
+            <div className="askus-page">
+            <h1 className='title'>Is there something you don’t understand or want to know more about?</h1>
+            <br/>
+            <h3 className="askus-title">Leave us a question!</h3>
+            <div className="contact-form-container">
+                <form >
+                    <div className="form-group">
+                        <label htmlFor="questionInput"></label>
+                        <input type="text" className="form-control champtext" id="questionInput" name="question" placeholder='E.g. What is the difference between tailwind and sailwind?' required />
+                    </div>
+                    <button type="submit" className="btn btn-custom btn-block " id='sendbtn'>Send</button>
+                </form>
             </div>
-        </div>
+            
+            </div>
+        </>
     );
 };
 
