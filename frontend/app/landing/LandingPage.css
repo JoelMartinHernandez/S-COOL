@@ -14,26 +14,74 @@
     user-select: none;
     -webkit-user-drag: none;
     padding-bottom: 200px;
+    background-color: #E9D8C8;
   }
   
   .triangle-indicator {
     width: 100vw;
     height: 100px;
-    background: #FCC21B;
+    background: #EEE9E3;
     clip-path: polygon(50% 100%, 0 0, 100% 0);
   }
   
   .rectangle-indicator {
     width: 100vw;
     height: 100vh;
-    background: #FCC21B;
+    background: #EEE9E3;
     display: flex;
     text-align: center;
   }
 
   .scroll-message {
+    position: absolute;
+    bottom: 20%; 
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
-    padding-top: 100%;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    height: 30px;
   }
 
 
+  .rectangle-indicator h2 {
+    padding-right: 150px;
+    margin: auto; /* Centrer horizontalement */
+    color: #0B1215; /* Couleur du texte */
+    font-size: 20px; /* Taille de la police */
+  }
+  .landinglogo{
+    background-color: #EEE9E3;
+    text-align: center;
+    /* padding-bottom: 170px; */
+
+  }
+  #landinglogo{
+    background-color: #EEE9E3;
+    margin-top: 10px;
+  }
+
+
+  .flower{
+    background-color: #EEE9E3;
+    text-align: center;
+    height: auto; /* Permet à la hauteur de s'ajuster automatiquement pour conserver les proportions */
+    position: relative;
+    padding-bottom: 30px;
+  }
+  #flower {
+    margin-bottom: -30px;
+    width: 320px; /* Définissez la largeur souhaitée */
+    height: auto; /* Permet à la hauteur de s'ajuster automatiquement pour conserver les proportions */
+  }
+  .flower p {
+    position: absolute;
+    top: 30%; /* Positionne le texte au milieu verticalement */
+    left: 50%; /* Positionne le texte au milieu horizontalement */
+    transform: translate(-50%, -50%); /* Centre le texte par rapport à son parent */
+    color: #0B1215; /* Couleur du texte */
+    font-size: 24px; /* Taille de la police */
+    font-family: 'Montserrat', sans-serif;
+
+  }
