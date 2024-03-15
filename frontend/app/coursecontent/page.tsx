@@ -24,21 +24,5 @@ const CourseContent = ({ course }: CourseProps) => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  const supabaseAdmin = createClient();
-  const { id } = context.params as { id: string };
-  const { data: course, error } = await supabaseAdmin
-    .from('course')
-    .select('*')
-    .eq('course_id', id)
-    .single();
-
-  if (error) {
-    console.error('Error fetching course:', error);
-    return { props: { course: null } };
-  }
-
-  return { props: { course } };
-};
 
 export default CourseContent;
