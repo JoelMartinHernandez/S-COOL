@@ -7,10 +7,10 @@ import Image from 'next/image';
 import logo from '../../assets/img/logo.svg';
 import flower from '../../assets/img/contactusflower.svg';
 
-import { List } from "./ListCourse";
 function Courses() {
+
     return (
-        <>
+       
         <div className="Coursespage">
         <TopBarDropdown />
         <div className="courses-container">
@@ -40,8 +40,9 @@ function Courses() {
 
         </div>
         </div>
+        </div>
         
-        </>
+ 
         
     ); 
 }

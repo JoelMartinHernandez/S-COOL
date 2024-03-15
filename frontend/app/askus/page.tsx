@@ -48,9 +48,6 @@ const AskusPage: React.FC = () => {
     </div>
 </div>
             
-
-            </div>
-        </>
     );
 };
 
