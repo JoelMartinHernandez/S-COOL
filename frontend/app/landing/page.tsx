@@ -2,6 +2,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import './LandingPage.css';
+import logo from '../../assets/img/logo.svg';
+import landinglogo from '../../assets/img/landinglogo.svg';
+import greenflower from '../../assets/img/greenflower.svg';
+import Image from 'next/image';
+
+
 
 const LandingPage: React.FC = () => {
   const [isDragging, setIsDragging] = useState<boolean>(false);
@@ -60,6 +66,13 @@ const LandingPage: React.FC = () => {
         style={containerStyle}
       >
         <div className="rectangle-indicator"></div>
+        <div className="landinglogo">
+          <Image src={landinglogo}  id="landinglogo" alt="Logo"  />
+        </div>
+        <div className="flower">
+          <p>Where education is for everyone.</p>
+          <Image src={greenflower} id="flower" alt="Logo"  />
+        </div>
         <div className="triangle-indicator"></div>
       </div>
       <div className="scroll-message">Scroll Up to Begin!</div>

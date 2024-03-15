@@ -28,9 +28,11 @@ const About: React.FC = () => {
                 </p>
 
                 <div className='Btns'>
+                    <div>
                     <a href='/register'>
                         <input type='button' id='btn1' value='Sign me up!'></input>
-                    </a>
+                      </a>
+                    </div>
                     <a href='/login'>
                         <input type='button' id='btn2' value='Log me in!'></input>
                     </a>

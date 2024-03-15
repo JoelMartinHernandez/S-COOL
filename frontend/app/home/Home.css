@@ -1,7 +1,8 @@
-.home-container{
+.homepage{
     background-color: #EEE9E3;
     height: 100vh;
 }
+
 
 .logo-section h1 {
     margin: 0;
@@ -21,6 +22,7 @@
     align-items: center;
     width: 100vw;
 }
+
 
 .home-navigation-menu {
     justify-content: space-around;
@@ -104,9 +106,17 @@
 }
 
 .homeflower {
-    padding-left: 124px;
-}
+    padding-left: 50px;
+    overflow: hidden;
+    margin-top: -350px;
+    background-color: #EEE9E3;
 
+}
+.myHomepageflower{
+    overflow: hidden;
+    background-color: #EEE9E3;
+
+}
 
 .horizontal-lineAbout {
     position: relative;
@@ -160,4 +170,5 @@
     height: calc(100% - -200px); 
     background-color: #0B1215; 
     transform: translateY(-50%) rotate(-90deg); 
+
 }

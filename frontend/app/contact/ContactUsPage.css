@@ -1,15 +1,15 @@
 .contact-page {
   background-color: #EEE9E3;
   height: 100vh;
+  overflow: hidden;
 }
 
 .contact-form-container {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #E9D8C8;
+  background-color: transparent;
   border-radius: 8px;
-  box-shadow: 0 9px 9px 8px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form {
@@ -21,34 +21,61 @@
   justify-content: center;
   align-items: center;
 }
-
-.message-textarea {
-  border-radius: 4px;
+.title{
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 10px;
 }
-
-.submit-button {
-  background-color: #75F5A8;
-  border-color: #75F5A8;
-  width: 100%;
-  height: 40px;
-  font-size: 16px;
-  margin-top: 16px;
-}
-
-.submit-button:hover,
-.submit-button:focus {
-  background-color: #54af78;
-  border-color: #54af78;
-}
-
 .message-textarea>textarea {
   padding: 10px;
 }
 
-.contact-page h1.contact-title {
+.contact-page h3.contact-title {
   text-align: center;
+  margin-bottom: -20px;
+
 }
 
-.submit-button {
-  font-size: large;
+
+.flower{
+  background-color: transparent;
+  margin-left: -50px;
+  margin-top: -15px;
+}
+#flower{
+  width: 263.63px;
+  height: 261.74px;
+  background-color: #EEE9E3;
+
+}
+.champtext{
+  border-radius: 12px !important;
+  width: 321px;
+  height: 230px;
+}
+.form-control:focus {
+  color: var(--bs-body-color);
+  background-color: var(--bs-body-bg);
+  border-color: transparent !important;
+  outline: 0;
+  box-shadow:none !important;
+}
+.btn-custom {
+  background-color: #FCC21B !important; 
+  border-color: #FCC21B !important; 
+  border-radius: 36px !important;
+  width: 88px;
+  height: 30px;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 16px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+#sendbtn{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}
+form{
+  text-align: center;
 }

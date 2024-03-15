@@ -1,10 +1,12 @@
 import { createClient } from '@/utils/supabase/server';
 import React from 'react';
-import { Form, Input, Button } from 'antd';
 import './AskPage.css';
 import TopBarDropdown from '../../components/TopBarDropdown';
 import Image from 'next/image';
 import logo from '../../assets/img/logo.svg';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import { Askus } from '../types/types';
 import { SubmitButton } from '../login/submit-button';
 import { addDoubt } from '@/service/askus.service';
@@ -22,28 +24,33 @@ const AskusPage: React.FC = () => {
     };
 
     return (
-        <div className="contact-page">
-            <TopBarDropdown />
-            <div className="logo-section">
-                <Image src={logo} alt="Logo" width={250} height={200} />
-            </div>
-            <br/>
-            <div className="contact-form-container">
-                <h1 className="contact-title">Contact Us</h1>
 
-                <div>
-                    <form>
-                    <label>
-                        message:
-                        <input type="text" name="doubt_message" id="doubt_message" />
-                    </label>
+        <div className="askus-page">
+    <TopBarDropdown />
+    <div className="logo-section">
+        <Image src={logo} alt="Logo" width={250} height={200} />
+    </div>
+    <br/>
+    <div className="contact-form-container">
+        <h1 className="title">Contact Us</h1>
+        <br/>
+        <h3 className="askus-title">Leave us a message!</h3>
 
-                    <SubmitButton formAction={publishDoubt} pendingText="Signing Up...">SEND</SubmitButton>
-                    </form>
+        <div>
+            <form>
+                <div className="form-group">
+                    <label htmlFor="doubt_message" className="form-control-label"></label>
+                    <input type="text" className="form-control champtext" id="doubt_message" name="doubt_message" placeholder='Your message here' />
                 </div>
-                
-            </div>
+                <SubmitButton formAction={publishDoubt} pendingText="Sending...">SEND</SubmitButton>
+            </form>
         </div>
+    </div>
+</div>
+            
+
+            </div>
+        </>
     );
 };
 

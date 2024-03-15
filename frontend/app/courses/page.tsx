@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 import { List } from './ListCourse';
 
@@ -6,14 +5,29 @@ import './Courses.css';
 import TopBarDropdown from '../../components/TopBarDropdown';
 import Image from 'next/image';
 import logo from '../../assets/img/logo.svg';
+import flower from '../../assets/img/contactusflower.svg';
+
+import { List } from "./ListCourse";
 function Courses() {
     return (
+        <>
+        <div className="Coursespage">
+        <TopBarDropdown />
         <div className="courses-container">
-                        <TopBarDropdown />
-
-                        <div className="logo-section">
-                <Image src={logo} alt="Logo" width={350} height={30} />
+            
+            
+            <h1>COURSES</h1>
+            <div  className="navigation-menu">
+                <List />
             </div>
+            <div className='myflower1'> 
+                <Image src={flower} alt="flower" id="flower1" />
+            </div>
+
+            <div className='myflower2'> 
+                <Image src={flower} alt="flower" id="flower2" />
+            </div>
+
             <nav className="navigation-menu">
                 <Link href="/about" className="menu-item"><span className="course-item">Cyber Security</span></Link>
                 <Link href="/courses" className="menu-item"><span className="course-item">Web Development</span></Link>
@@ -23,9 +37,13 @@ function Courses() {
             </nav>
             <div>
             <List></List>
+
         </div>
         </div>
-    );
+        
+        </>
+        
+    ); 
 }
 
 export default Courses;

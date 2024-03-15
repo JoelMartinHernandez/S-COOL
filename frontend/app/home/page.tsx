@@ -5,6 +5,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import logo from '../../assets/img/logo.svg';
 import greenflower from '../../assets/img/greenflower.svg';
+import 'typeface-roboto';
+import '@fontsource/roboto';
+
 
 const Home: React.FC = () => {
     return (
