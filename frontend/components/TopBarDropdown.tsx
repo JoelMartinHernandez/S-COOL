@@ -20,14 +20,16 @@ const TopBarDropdown: React.FC = () => {
       case '3':
         router.push('/courses');
         break;
-      // Assuming '4' is for log out, adjust if needed.
       case '4':
-        // Implement log out logic or navigation as required.
         console.log('Log Out Clicked');
         break;
       default:
         break;
     }
+  };
+
+  const handleProfileIconClick = () => {
+    router.push('/login');
   };
 
   return (
@@ -41,13 +43,13 @@ const TopBarDropdown: React.FC = () => {
         {visible && (
           <div className="customMenu">
             <div className="menuItem" onClick={() => handleMenuClick('1')}>Home</div>
-            {/* <div className="menuItem" onClick={() => handleMenuClick('2')}>Profile</div> */}
+            <div className="menuItem" onClick={() => handleMenuClick('2')}>Profile</div>
             <div className="menuItem" onClick={() => handleMenuClick('3')}>Courses</div>
             <div className="menuItem" onClick={() => handleMenuClick('4')}>Log Out</div>
           </div>
         )}
       </div>
-      <div className="profileIcon">
+      <div className="profileIcon" onClick={handleProfileIconClick}>
         <UserOutlined style={{ fontSize: '24px' }} />
       </div>
     </div>
