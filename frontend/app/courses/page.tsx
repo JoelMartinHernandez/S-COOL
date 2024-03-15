@@ -14,8 +14,8 @@ function Courses() {
         <div className="Coursespage">
         <TopBarDropdown />
         <div className="courses-container">
-            
-            
+            <TopBarDropdown />
+
             <h1>COURSES</h1>
             <div  className="navigation-menu">
                 <List />

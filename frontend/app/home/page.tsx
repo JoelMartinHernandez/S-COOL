@@ -28,11 +28,14 @@ const Home: React.FC = () => {
                             <span className='topic'><a>Courses</a></span>
                         </Link>
                     </div>
-                    <div className='horizontal-lineProfile'>
-                        <Link href="/profile">
-                            <span className='topic'><a>Profile</a></span>
-                        </Link>
-                    </div>
+
+                    
+                    {/* <div className='horizontal-lineProfile'>
+                        <a href="/profile">
+                            <h3 className='topic'>Profile</h3>
+                        </a>
+                    </div> */}
+
                     <div className='horizontal-lineCourses'>
                         <Link href="/contact">
                             <span className='topic'><a>Contact</a></span>

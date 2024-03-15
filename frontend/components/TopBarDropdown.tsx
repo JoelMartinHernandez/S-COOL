@@ -20,6 +20,7 @@ const TopBarDropdown: React.FC = () => {
       case '3':
         router.push('/courses');
 
+
       case '4':
         router.push('/about');
       case '5':
@@ -31,6 +32,10 @@ const TopBarDropdown: React.FC = () => {
       default:
         break;
     }
+  };
+
+  const handleProfileIconClick = () => {
+    router.push('/login');
   };
 
   return (
@@ -54,7 +59,7 @@ const TopBarDropdown: React.FC = () => {
           </div>
         )}
       </div>
-      <div className="profileIcon">
+      <div className="profileIcon" onClick={handleProfileIconClick}>
         <UserOutlined style={{ fontSize: '24px' }} />
       </div>
     </div>
