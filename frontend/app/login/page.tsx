@@ -1,4 +1,6 @@
 import Link from "next/link";
+import jsCookie from 'js-cookie';
+import { useState } from "react";
 import { headers } from "next/headers";
 import { createClient } from "@/utils/supabase/server";
 import { redirect } from "next/navigation";
@@ -10,6 +12,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 export default function Login({
+
   searchParams,
 }: {
   searchParams: { message: string };
@@ -29,6 +32,20 @@ export default function Login({
     if (error) {
       return redirect("/login?message=Could not authenticate user");
     }
+
+     const user = await supabase.auth.getUser();
+    //  console.log("User ID:", user.data.user.id);
+     if(user.data.user){
+      try{
+       console.log(user.data.user.id)
+       localStorage.setItem('userId', user.data.user.id);
+     }catch(error){}
+    }
+
+    // if (user.data.user) {
+    //   jsCookie.set("userId",  user.data.user.id, { expires: 24 });
+    //   return redirect("/home");
+    // }
 
     return redirect("/home");
   };

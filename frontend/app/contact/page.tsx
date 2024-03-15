@@ -1,61 +1,57 @@
-"use client";
+// "use client";
+import { createClient } from '@/utils/supabase/server';
 import React from 'react';
 import { Form, Input, Button } from 'antd';
 import './ContactUsPage.css';
 import TopBarDropdown from '../../components/TopBarDropdown';
 import Image from 'next/image';
 import logo from '../../assets/img/logo.svg';
+
 import flower from '../../assets/img/contactusflower.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Contact } from '../types/types';
+import { addContact } from '@/service/contact.service';
+import { SubmitButton } from '../login/submit-button';
+
+
 
 const ContactUsPage: React.FC = () => {
-    const onFinish = (values: any) => {
-        console.log('Received values of form:', values);
-    };
 
-    const onFinishFailed = (errorInfo: any) => {
-        console.log('Failed:', errorInfo);
+
+    const publishComment = async(formData: FormData) => {
+        "use server"
+
+        // const data: { [key: string]: FormDataEntryValue } = Object.fromEntries(formData.entries());
+        const allPosts: Contact|undefined = await addContact(formData.get("contact_message") as string);
+        // console.log(allPosts)
+
     };
 
     return (
-        <div className="contact-page">
-            <TopBarDropdown />
-            <div className="logo-section">
-                <Image src={logo} alt="Logo" width={250} height={200} />
-            </div>
-            <br/>
-            <div className="contact-form-container">
-                <h1 className="contact-title">Contact Us</h1>
+        <>
+        <TopBarDropdown />
 
-                <Form
-                    name="contact_form"
-                    onFinish={onFinish}
-                    onFinishFailed={onFinishFailed}
-                    layout="vertical"
-                    className="contact-form"
-                >
-                    <Form.Item
-                        name="message"
-                        label="Leave us a message:"
-                        rules={[
-                            {
-                                required: true,
-                                message: 'Please input your message!',
-                            },
-                        ]}
-                    >
-                        <Input.TextArea />
-                    </Form.Item>
-                    <Form.Item>
-                        <Button type="primary" htmlType="submit">
-                            SEND
-                        </Button>
-                    </Form.Item>
-                </Form>
+            <div className="contact-page">
+            <h1 className='title'>Contact form</h1>
+            <br/>
+            <h3 className="contact-title">Leave us a message!</h3>
+            <div className="contact-form-container">
+
+                <form >
+                    <div className="form-group">
+                        <label htmlFor="questionInput"></label>
+                        <input type="text" className="form-control champtext" id="contact_message" name="contact_message" required />
+                    </div>
+                    <SubmitButton formAction={publishComment} pendingText="Sending...">SEND</SubmitButton>
+                </form>
             </div>
             <div className="flower">
-                <Image src={flower} id="flower" alt="Logo"  />
+                <Image src={flower} id="flower" alt="Fleur" />
             </div>
-        </div>
+
+            </div>
+        </>
+        
     );
 };
 

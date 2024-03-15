@@ -1,10 +1,12 @@
+.Coursespage{
+    background-color:  #EEE9E3;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+}
+
 .courses-container{
     background-color: #EEE9E3;
-    height: 100vh;
-}
-.logo-section h1 {
-    margin: 0;
-    font-size: 24px;
 }
 
 .logo-section img {
@@ -48,12 +50,13 @@
 }
 
 .course-item{
-    font-size: xxx-large;
+    font-size: 16px;
 }
 
 .courses-container h1 {
-    color: #2a2a2a; 
-    font-size: 4rem;
+    color: #2a2a2a;
+    background-color: transparent; 
+    font-size: 3rem;
     text-align: center;
     margin-top: 20px;
     margin-bottom: 30px;
@@ -61,3 +64,46 @@
     text-transform: uppercase;
     letter-spacing: 1.5px;
 }
+
+  .courses-container {
+    position: relative;
+    background-color: transparent;
+}
+
+.navigation-menu {
+    position: relative;
+    z-index: 2; 
+    background-color: transparent;
+}
+
+.myflower2{
+    max-width: 100%;
+    height: auto; 
+    overflow: hidden;
+}
+#flower2 {
+    position: absolute; 
+    top: 400px; 
+    left: 150px;
+    z-index: 1; 
+    overflow: hidden;
+}
+.myflower1{
+    max-width: 100%;
+    height: auto; 
+    overflow: hidden;
+}
+#flower1 {
+    position: absolute; 
+    top: 70px; 
+    left: -40px; 
+    z-index: 1; 
+    overflow: hidden;
+}
+
+
+.courses-container h1{
+    margin-bottom: 60px;
+}
+
+

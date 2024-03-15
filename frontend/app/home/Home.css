@@ -114,8 +114,14 @@ a {
     padding-left: 50px;
     overflow: hidden;
     margin-top: -350px;
-}
+    background-color: #EEE9E3;
 
+}
+.myHomepageflower{
+    overflow: hidden;
+    background-color: #EEE9E3;
+
+}
 
 .horizontal-lineAbout {
     position: relative;
@@ -169,5 +175,5 @@ a {
     height: calc(100% - -200px); 
     background-color: #0B1215; 
     transform: translateY(-50%) rotate(-90deg); 
-}
 
+}
