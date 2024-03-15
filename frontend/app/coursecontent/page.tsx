@@ -1,6 +1,4 @@
 "use server";
-import { GetServerSideProps } from 'next';
-import { createClient } from '@/utils/supabase/server';
 
 interface Course {
   course_id: number;
