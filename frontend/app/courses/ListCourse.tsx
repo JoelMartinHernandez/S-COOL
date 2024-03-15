@@ -1,5 +1,6 @@
 import { createClient } from '@/utils/supabase/server';
-import './Courses.css'; // Asegúrate de importar el CSS
+import './Courses.css';
+import Link from 'next/link';
 
 interface Course {
     course_id: number;
@@ -12,13 +13,14 @@ export async function List() {
     const { data: course } = await supabase.from("course").select();
 
     return (
-        <div className="courses-container"> {/* Utiliza la misma clase que en Courses */}
+        <div className="courses-container">
             {course ? (
                 course.map((b: Course, index: number) => (
-                    <div className="menu-item" key={b.course_id}> 
-                        <span className="course-item"> {b.course_name}</span>
-                    </div>
+                    <Link legacyBehavior href={`/coursecontent/${b.course_id}`} key={b.course_id}>
+                        <div className="menu-item"><a className="course-item">{b.course_name}</a></div>
+                    </Link>
                 ))
+
             ) : (
                 <div>No se encontraron cursos.</div>
             )}

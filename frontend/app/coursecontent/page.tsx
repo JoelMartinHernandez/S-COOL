@@ -1,27 +1,44 @@
-import { useEffect, useState } from "react";
-import Link from "next/link";
-import { ContentA } from './ContentCourse';
+"use server";
+import { GetServerSideProps } from 'next';
+import { createClient } from '@/utils/supabase/server';
 
-function Courses() {
-return (
-    <div className="courses-container">
-        <div className="logo-section">
-            {/* Comenta o elimina cualquier código que no se pueda renderizar en el servidor */}
-        </div>
-
-        <nav className="navigation-menu">
-            <Link href="/about" className="menu-item"><span className="course-item">Cyber Security</span></Link>
-            <Link href="/courses" className="menu-item active"><span className="course-item">Web Development</span></Link>
-            <Link href="/quizzes" className="menu-item"><span className="course-item">Psychology</span></Link>
-            <Link href="/profile" className="menu-item"><span className="course-item">Finance</span></Link>
-            <Link href="/profile" className="menu-item"><span className="course-item">Graphic Design</span></Link>
-        </nav>
-
-        <div>
-            <ContentA courseId={16}></ContentA>
-        </div>
-    </div>
-);
+interface Course {
+  course_id: number;
+  course_name: string;
+  course_description: string;
 }
 
-export default Courses;
+interface CourseProps {
+  course: Course | null;
+}
+
+const CourseContent = ({ course }: CourseProps) => {
+  if (!course) return <div>No se encontró el curso.</div>;
+
+  return (
+    <div className="course-content">
+      <h1 className="course-title">{course.course_name}</h1>
+      <p className="course-id">ID: {course.course_id}</p>
+      <p className="course-description">{course.course_description}</p>
+    </div>
+  );
+};
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const supabaseAdmin = createClient();
+  const { id } = context.params as { id: string };
+  const { data: course, error } = await supabaseAdmin
+    .from('course')
+    .select('*')
+    .eq('course_id', id)
+    .single();
+
+  if (error) {
+    console.error('Error fetching course:', error);
+    return { props: { course: null } };
+  }
+
+  return { props: { course } };
+};
+
+export default CourseContent;

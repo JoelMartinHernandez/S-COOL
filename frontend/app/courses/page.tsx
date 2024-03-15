@@ -8,7 +8,6 @@ function Courses() {
     return (
         <div className="courses-container">
             <TopBarDropdown />
-
             <h1>COURSES</h1>
             <List />
         </div>
