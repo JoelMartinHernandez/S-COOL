@@ -1,3 +1,6 @@
+
+// "use server";
+import { cookies } from "next/headers";
 import { createClient } from '@/utils/supabase/server';
 import './Courses.css';
 import Link from 'next/link';
@@ -11,7 +14,12 @@ interface Course {
 export async function List() {
     const supabase = createClient();
     const { data: course } = await supabase.from("course").select();
+    const user = await supabase.auth.getUser();
+    if(user.data.user){
+    console.log(user.data.user.id)
+    }
 
+    
     return (
         <div className="courses-container">
             {course ? (
@@ -24,6 +32,7 @@ export async function List() {
             ) : (
                 <div>No se encontraron cursos.</div>
             )}
+            
         </div>
     );
 }
