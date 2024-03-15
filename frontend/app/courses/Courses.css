@@ -1,0 +1,109 @@
+.Coursespage{
+    background-color:  #EEE9E3;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+}
+
+.courses-container{
+    background-color: #EEE9E3;
+}
+
+.logo-section img {
+    justify-content: space-around;
+    height: auto;
+    display: flex;
+    text-align: center;
+}
+
+.logo-section {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.navigation-menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.menu-item {
+    text-decoration: none;
+    color: black;
+    padding: 10px 0;
+    padding-left: 60px;
+    border-bottom: 1px solid black;
+    margin: 5px 0;
+    display: block;
+    overflow: hidden;
+}
+
+.menu-item span {
+    display: block;
+    transition: transform 0.4s ease-in-out;
+}
+
+.menu-item:hover span {
+    transform: translateX(80px);
+}
+
+.course-item{
+    font-size: 16px;
+}
+
+.courses-container h1 {
+    color: #2a2a2a;
+    background-color: transparent; 
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+  .courses-container {
+    position: relative;
+    background-color: transparent;
+}
+
+.navigation-menu {
+    position: relative;
+    z-index: 2; 
+    background-color: transparent;
+}
+
+.myflower2{
+    max-width: 100%;
+    height: auto; 
+    overflow: hidden;
+}
+#flower2 {
+    position: absolute; 
+    top: 400px; 
+    left: 150px;
+    z-index: 1; 
+    overflow: hidden;
+}
+.myflower1{
+    max-width: 100%;
+    height: auto; 
+    overflow: hidden;
+}
+#flower1 {
+    position: absolute; 
+    top: 70px; 
+    left: -40px; 
+    z-index: 1; 
+    overflow: hidden;
+}
+
+
+.courses-container h1{
+    margin-bottom: 60px;
+}
+
+
