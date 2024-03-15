@@ -1,4 +1,3 @@
-
 .homepage{
     background-color: #EEE9E3;
     height: 100vh;
@@ -171,5 +170,5 @@
     height: calc(100% - -200px); 
     background-color: #0B1215; 
     transform: translateY(-50%) rotate(-90deg); 
-}
 
+}

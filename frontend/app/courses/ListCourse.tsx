@@ -1,3 +1,6 @@
+
+// "use server";
+import { cookies } from "next/headers";
 import { createClient } from '@/utils/supabase/server';
 import './Courses.css'; // Asegúrate de importar el CSS
 
@@ -10,7 +13,12 @@ interface Course {
 export async function List() {
     const supabase = createClient();
     const { data: course } = await supabase.from("course").select();
+    const user = await supabase.auth.getUser();
+    if(user.data.user){
+    console.log(user.data.user.id)
+    }
 
+    
     return (
         <div className="courses-container"> {/* Utiliza la misma clase que en Courses */}
             {course ? (
